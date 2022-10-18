@@ -10,12 +10,16 @@ void times_table(void)
 
 	for (row = 0; row <= 9; row++)
 	{
+		_putchar('0');
+		_putchar(',');
+		_putchar(' ');
+	}
+	{
 		for (column = 0; column <= 9; column++)
 		{
 			product = row * column;
 			tens = product / 10;
 			ones = product % 10;
-
 			if (column == 0)
 			{
 				_putchar('0');
