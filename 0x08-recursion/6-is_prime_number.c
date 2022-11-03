@@ -3,7 +3,7 @@
 /**
  * is_prime_number - executes prime_checker
  * @n: input to check
- * Return: Always 0 (Success)
+ * Return: Always 0
  */
 int is_prime_number(int n)
 
