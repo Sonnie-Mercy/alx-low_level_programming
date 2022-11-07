@@ -8,20 +8,19 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, res = 1;
+	int n, m, diff;
 
 	if (argc != 3)
 	{
-		printf("%s\n", "Error");
+		printf("Error\n");
 		return (1);
 	}
-	else
-	{
-		for (i = 1; i < argc; i++)
-		{
-			res *= atoi(argv[i]);
-		}
-		printf("%d\n", res);
-	}
+
+	n = atoi(argv[1]);
+	m = atoi(argv[2]);
+	diff = n * m;
+
+	printf("%i\n", diff);
+
 	return (0);
 }
