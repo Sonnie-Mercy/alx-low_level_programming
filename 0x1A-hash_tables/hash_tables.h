@@ -41,5 +41,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value);
 char *hash_table_get(const hash_table_t *ht, const char *key);
 void hash_table_print(const hash_table_t *ht);
 void hash_table_delete(hash_table_t *ht);
+int set_pair_only(hash_table_t *ht, const char *key,
+		  const char *value, unsigned long int index);
+hash_node_t *set_pair(const char *key, const char *value);
 
 #endif /* __hash_tables__ */
