@@ -1,25 +1,34 @@
 #include <stdio.h>
+
 /**
- * main - program that prints numbers
- * Return: 0
+ * main - prints all pairs of digits 01-89 which are different,
+ * seperated by commas and spaces.
+ *
+ * Return: Always 0 (success)
  */
 int main(void)
 {
-	int i, j;
+	int TENS = '0', ONES = '0', i = 0;
 
-	for (i = 0; i <= 9; i++)
+	while (TENS <= '9')
 	{
-		for (j = 0; j <= 9; j++)
-			if (i < j)
+		while (ONES <= '9')
+		{
+			if ((ONES != TENS) || (ONES == (ONES + TENS)))
 			{
-				putchar (i);
-				putchar (j);
-				if ((i != '8') || (j != '9'))
+				putchar(TENS);
+				putchar(ONES);
+				if ((TENS != '8') || (ONES != '9'))
 				{
-					putchar (',');
-					putchar (' ');
+					putchar(',');
+					putchar(' ');
 				}
 			}
+			ONES++;
+		}
+		ONES = (TENS + 1);
+		TENS++;
+		i++;
 	}
 	putchar('\n');
 	return (0);
