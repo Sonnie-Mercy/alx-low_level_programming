@@ -1,44 +1,37 @@
 #include "main.h"
 
 /**
- * times_table - prints the 9 times table, starting with 0
- * Return: void
+ * times_table - prints the 9 by 9 mult table
  */
 void times_table(void)
 {
-	int row, column, product, tens, ones;
+	int mult1, mult2, product;
 
-	for (row = 0; row <= 9; row++)
+	for (mult1 = 0; mult1 <= 9; mult1++)
 	{
-		_putchar('0');
-		_putchar(',');
-		_putchar(' ');
-	}
-	{
-		for (column = 0; column <= 9; column++)
+		for (mult2 = 0; mult2 <= 9; mult2++)
 		{
-			product = row * column;
-			tens = product / 10;
-			ones = product % 10;
-			if (column == 0)
+			product = mult1 * mult2;
+			if (product >= 10)
 			{
-				_putchar('0');
+				_putchar((product / 10) + '0');
+				_putchar((product % 10) + '0');
 			}
-			else if (product < 10)
+			else if (mult2 == 0)
 			{
-				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
-				_putchar(ones + '0');
+				_putchar(product + '0');
 			}
 			else
 			{
-				_putchar(',');
 				_putchar(' ');
-				_putchar(tens + 0);
-				_putchar(ones + 0);
+				_putchar(product + '0');
+			}
+			if (mult2 < 9)
+			{
+				_puctchar(',');
+				_puctchar(' ');
 			}
 		}
-		_putchar('\n');
 	}
+	_putchar('\n');
 }
