@@ -28,8 +28,8 @@ void times_table(void)
 			}
 			if (mult2 < 9)
 			{
-				_puctchar(',');
-				_puctchar(' ');
+				_putchar(',');
+				_putchar(' ');
 			}
 		}
 	}
