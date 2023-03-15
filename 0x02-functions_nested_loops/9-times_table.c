@@ -16,14 +16,14 @@ void times_table(void)
 			{
 				_putchar(product + '0');
 			}
-			if
+
+			if (product < 10 && mult2 != 0)
 			{
-				(product < 10 && mult2 != 0)
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar(product + '0');
-			} else if (product > 10)
+				_putchar(',')
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(product + '0');
+			} else if (product >= 10)
 			{
 				_putchar(',');
 				_putchar(' ');
@@ -32,4 +32,5 @@ void times_table(void)
 			}
 		}
 	_putchar('\n');
+	}
 }
