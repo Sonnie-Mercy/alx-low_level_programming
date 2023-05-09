@@ -1,4 +1,5 @@
 #include "search_algos.h"
+
 /**
  * linear_search - function that searches for value in array via linear search
  * @array: pointer to the first element of the array
@@ -16,8 +17,9 @@ int linear_search(int *array, size_t size, int value)
 	for (arr = 0; arr < size; arr++)
 	{
 		printf("Value checked array[%ld] = [%d]\n", arr, array[arr]);
+
 		if (array[arr] == value)
-				return (arr);
+			return (arr);
 	}
 	return (-1);
 }
