@@ -29,7 +29,7 @@ int binary_rec(int *array, size_t left, size_t right, int value)
 		{
 			if (mid == left || array[mid - 1] != value)
 				return (mid);
-			return (binary_rec(array, left, mid, value));
+			return (binary_rec(array, left, mid - 1, value));
 		}
 		else if (array[mid] < value)
 			return (binary_rec(array, mid + 1, right, value));
