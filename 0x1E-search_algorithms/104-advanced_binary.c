@@ -15,7 +15,7 @@ int binary_rec(int *array, size_t left, size_t right, int value)
 	{
 		mid = left + (right - left) / 2;
 
-		printf("Searching in array ");
+		printf("Searching in array: ");
 
 		for (i = left; i <= right; i++)
 		{
