@@ -28,6 +28,10 @@ long largest_prime(long num)
 		return (num);
 	return (factor);
 }
+/**
+ * main - entry point
+ * Return: void
+ */
 int main(void)
 {
 	long num = 612852475143;
