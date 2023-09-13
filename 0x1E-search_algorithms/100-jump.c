@@ -12,12 +12,12 @@ int jump_search(int *array, size_t size, int value)
 	if (!array || size == 0)
 		return (-1);
 
-	int jump = (int)sqrt(size); 
-	int le = 0;
-	int ri = 0;
+	size_t jump = sqrt(size);
+	size_t le = 0;
+	size_t ri = 0;
 	int i;
 
-	while (ri < (int)size && array[ri] < value)
+	while (ri < size && array[ri] < value)
 	{
 		le = ri;
 		ri += jump;
