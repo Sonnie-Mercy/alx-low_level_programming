@@ -6,14 +6,17 @@
  * @array: pointer to the first element of the array to search in
  * @size: number of elements in array
  * @value: value to search for
- * Return: index where the value is located, or -1 if not found or array is NULL
+ * Return: index where the value is located, or -1 if not found or NULL array
  */
 int interpolation_search(int *array, size_t size, int value)
 {
+	size_t low, high, pos;
+
 	if (!array || size == 0)
 		return (-1);
-	size_t low = 0;
-	size_t high = size - 1;
+
+	low = 0;
+	high = size - 1;
 
 	while (low <= high && value >= array[low] && value <= array[high])
 	{
@@ -21,15 +24,19 @@ int interpolation_search(int *array, size_t size, int value)
 		{
 			if (array[low] == value)
 			{
-				printf("Value checked array[%lu] = [%d]\n", low, array[low]);
+				printf("Value checked array[%lu] = [%d]\n",
+						low, array[low]);
 				return (low);
 			}
 			return (-1);
 		}
-		size_t pos = low + (((double)(high - low) / (array[high] - array[low])) * (value - array[low]));
+		pos = low + (((double)(high - low) /
+					(array[high] - array[low])) *
+				(value - array[low]));
 		if (array[pos] == value)
 		{
-			printf("Value checked array[%lu] = [%d]\n", pos, array[pos]);
+			printf("Value checked array[%lu] = [%d]\n",
+					pos, array[pos]);
 			return (pos);
 		}
 		printf("Value checked array[%lu] = [%d]\n", pos, array[pos]);
